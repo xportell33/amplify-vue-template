@@ -13,16 +13,14 @@ const schema = a.schema({
       isDone: a.boolean()
     }).authorization((allow) => [allow.publicApiKey()]),
     // }).authorization(allow => [allow.owner()]),   
-    Tipus: a.customType({
-      tipus: a.id().required(),
+    MacroTipusOp: a.customType({
+      macrotipusop: a.id().required(),
       descrip: a.string().required(),
-      usuari: a.string(),
       ingdes: a.string(),
-      ordre: a.integer(),
+      icona: a.string(),
       color: a.string(),
-      lletra: a.string(),
-      actiu: a.boolean(),
-      factor: a.float(),
+      estat: a.string(),
+      ordre: a.integer(),
     }),    
 });
 
